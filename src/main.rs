@@ -21,6 +21,7 @@ fn tokenize(raw_input: String){
 
     let vec: Vec<String> = replaced.split_whitespace().map(|s| s.to_string()).collect();
 
+    //randome comment
     println!("{:?} is the tokenized input", vec);
 }
 
