@@ -1,8 +1,5 @@
 use std::io;
 
-struct Atom {
-    content: String
-}
 
 fn main() {
     println!("Hello, world!");
@@ -13,19 +10,17 @@ fn main() {
         .read_line(&mut input)
         .expect("failed to read line");
 
-    let new_atom = Atom{
-        content: input[..input.len()-1].to_owned()
-    };
-
-    is_atom(new_atom)
+    tokenize(input);
 }
 
-fn is_atom(atom: Atom) {
+fn tokenize(raw_input: String){
 
-    println!("{} is the input", atom.content);
+    let replaced = raw_input
+        .replace("(", " ( ")
+        .replace(")", " ) ");
 
-   match atom.content.as_ref() {
-       "hello" => println!("hello world"),
-       _ => println!("anything")
-   }   
+    let vec: Vec<String> = replaced.split_whitespace().map(|s| s.to_string()).collect();
+
+    println!("{:?} is the tokenized input", vec);
 }
+
