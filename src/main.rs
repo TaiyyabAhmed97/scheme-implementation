@@ -1,5 +1,7 @@
 use std::io;
 
+type Symbol = String;
+type Atom = i64;
 
 fn main() {
     println!("Hello, world!");
@@ -10,10 +12,10 @@ fn main() {
         .read_line(&mut input)
         .expect("failed to read line");
 
-    tokenize(input);
+    let tokens = tokenize(input);
 }
 
-fn tokenize(raw_input: String){
+fn tokenize(raw_input: String) -> Vec<String> {
 
     let replaced = raw_input
         .replace("(", " ( ")
@@ -23,5 +25,7 @@ fn tokenize(raw_input: String){
 
     //randome comment
     println!("{:?} is the tokenized input", vec);
+
+    return vec;
 }
 
