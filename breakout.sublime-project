@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "/home/tabz/Odin/core",
+		},
+		{
+			"path": "/home/tabz/Odin/base"
+		},
+	],
+	"build_systems":
+	[
+		{
+			"name":"parser_build_odin",
+			"cmd":["/home/tabz/Odin/odin", "run", "."],
+		}
+	],
+}

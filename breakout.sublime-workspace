@@ -1,0 +1,399 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"BULL",
+				"BULLET_HEIGHT"
+			],
+			[
+				"PL",
+				"PLAYER_WIDTH"
+			],
+			[
+				"so",
+				"socket"
+			],
+			[
+				"bas",
+				"base_url"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"backgroun",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.odin",
+			"settings":
+			{
+				"buffer_size": 72,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					2,
+					"left_delete",
+					null,
+					"AgAAADsAAAAAAAAAOwAAAAAAAADrAAAAU0NSRUVOX1NJWkUgOjogMzIwClBBRERMRV9XSURUSCA6OiA1MApQQURETEVfSEVJR0hUOjogNgpQQURETEVfUE9TX1k6OiAyNjAKUEFERExFX1NQRUVEIDo6IDIwMApCQUxMX1NQRUVEIDo6IDI2MApCQUxMX1JBRElVUyA6OiA0CkJBTExfU1RBUlRfWSA6OiBTQ1JFRU5fU0laRSAvIDIKcGFkZGxlX3Bvc194OiBmMzIKYmFsbF9wb3M6IHJsLlZlY3RvcjIKYmFsbF9kaXI6IHJsLlZlY3RvcjIKc3RhcnRlZDogYm9vbDoAAAAAAAAAOgAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAJgEAAAAAAAA7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"left_delete",
+					null,
+					"AQAAAA0AAAAAAAAADQAAAAAAAAAaAAAACmltcG9ydCBybCAidmVuZG9yOnJheWxpYiI",
+					"AQAAAAAAAAABAAAAJwAAAAAAAAANAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					2,
+					"left_delete",
+					null,
+					"AgAAACEAAAAAAAAAIQAAAAAAAACKAAAACnJlc3RhcnQgOjogcHJvYygpIHsKCXBhZGRsZV9wb3NfeCA9IChTQ1JFRU5fU0laRSAvIDIpIC0gKFBBRERMRV9XSURUSCAvIDIpCgliYWxsX3BvcyA9IHtTQ1JFRU5fU0laRSAvIDIsIEJBTExfU1RBUlRfWX0KCXN0YXJ0ZWQgPSBmYWxzZQp9IAAAAAAAAAAgAAAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAqwAAAAAAAAAhAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"left_delete",
+					null,
+					"AQAAADQAAAAAAAAANAAAAAAAAAAZBAAAcmwuU2V0Q29uZmlnRmxhZ3MoIHsgLlZTWU5DX0hJTlQgfSkKCXJsLkluaXRXaW5kb3coNjQwLCA2NDAsICJCcmVha291dCEiKQoJcmwuU2V0VGFyZ2V0RlBTKDUwMCkKCglyZXN0YXJ0KCkKCglmb3IgIXJsLldpbmRvd1Nob3VsZENsb3NlKCkgewoJCWR0OiBmMzIKCQlpZiAhc3RhcnRlZCB7CgkJCWlmIHJsLklzS2V5RG93biguU1BBQ0UpIHsKCQkJCWJhbGxfZGlyID0gezAsIDF9CgkJCQlzdGFydGVkID0gdHJ1ZQoJCQl9CgkJfSBlbHNlIHsKCQkJZHQgPSBybC5HZXRGcmFtZVRpbWUoKQoJCX0KCgkJYmFsbF9wb3MgKz0gYmFsbF9kaXIgKiBCQUxMX1NQRUVEICogZHQKCQlwYWRkbGVfbW9kZV92ZWxvY2l0eTogZjMyCgoJCWlmIHJsLklzS2V5RG93biguTEVGVCkgewoJCQlwYWRkbGVfbW9kZV92ZWxvY2l0eSA9IC1QQURETEVfU1BFRUQKCQl9CgoJCWlmIHJsLklzS2V5RG93biguUklHSFQpIHsKCQkJcGFkZGxlX21vZGVfdmVsb2NpdHkgKz0gUEFERExFX1NQRUVECgkJfQoKCQlwYWRkbGVfcG9zX3ggKz0gcGFkZGxlX21vZGVfdmVsb2NpdHkgKiBkdAoJCXBhZGRsZV9wb3NfeCA9IGNsYW1wKHBhZGRsZV9wb3NfeCwgMCwgU0NSRUVOX1NJWkUgLSBQQURETEVfV0lEVEgpCgoJCXJsLkJlZ2luRHJhd2luZygpCgkJcmwuQ2xlYXJCYWNrZ3JvdW5kKHsxNTAsIDE5MCwgMjIwLCAyNTV9KQoKCQljYW1lcmEgOj0gcmwuQ2FtZXJhMkQgewoJCQl6b29tID0gZjMyKHJsLkdldFNjcmVlbkhlaWdodCgpL1NDUkVFTl9TSVpFKQoJCX0KCgkJcmwuQmVnaW5Nb2RlMkQoY2FtZXJhKQoJCXBhZGRsZV9yZWN0IDo9IHJsLlJlY3RhbmdsZXsKCQkJcGFkZGxlX3Bvc194LCBQQURETEVfUE9TX1ksCgkJCVBBRERMRV9XSURUSCwgUEFERExFX0hFSUdIVAoJCX0KCQlybC5EcmF3Q2lyY2xlVihiYWxsX3BvcywgQkFMTF9SQURJVVMsIHsyMDAsIDkwLCAyMCwgMjU1fSkKCgoJCXJsLkRyYXdSZWN0YW5nbGVSZWMocGFkZGxlX3JlY3QsIHs1MCwgMTUwLCA5MCwgMjU1fSkKCQlybC5FbmRNb2RlMkQoKQoJCXJsLkVuZERyYXdpbmcoKQoJfQoKCXJsLkNsb3NlV2luZG93KCk",
+					"AQAAAAAAAAABAAAANAAAAAAAAABNBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "fmt.println"
+					},
+					"CwAAADQAAAAAAAAANQAAAAAAAAAAAAAANQAAAAAAAAA2AAAAAAAAAAAAAAA2AAAAAAAAADcAAAAAAAAAAAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA5AAAAAAAAADoAAAAAAAAAAAAAADoAAAAAAAAAOwAAAAAAAAAAAAAAOwAAAAAAAAA8AAAAAAAAAAAAAAA8AAAAAAAAAD0AAAAAAAAAAAAAAD0AAAAAAAAAPgAAAAAAAAAAAAAAPgAAAAAAAAA/AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"insert_snippet",
+					{
+						"contents": "($0)"
+					},
+					"AQAAAD8AAAAAAAAAQQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAAEAAAAAAAAAAQgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "faf"
+					},
+					"AwAAAEEAAAAAAAAAQgAAAAAAAAAAAAAAQgAAAAAAAABDAAAAAAAAAAAAAABDAAAAAAAAAEQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQQAAAAAAAABBAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"th",
+				"UI: Select Theme"
+			],
+			[
+				"select colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/tabz/Projects/breakout"
+	],
+	"file_history":
+	[
+		"/home/tabz/Odin/core/fmt/fmt.odin",
+		"/home/tabz/Odin/vendor/raylib/raylib.odin",
+		"/home/tabz/Projects/plattest/main.odin",
+		"/home/tabz/Odin/vendor/raylib/raymath.odin",
+		"/home/tabz/Odin/core/odin/ast/walk.odin",
+		"/home/tabz/Projects/plattest/odin-game.sublime-project",
+		"/home/tabz/Projects/mock_server/pythin.sublime-project",
+		"/home/tabz/Projects/mock_server/main.py",
+		"/usr/lib/python3.11/http/server.py",
+		"/home/tabz/Odin/core/net/common.odin",
+		"/home/tabz/Odin/core/net/socket.odin",
+		"/home/tabz/Projects/greek/http.odin",
+		"/home/tabz/Odin/core/net/addr.odin",
+		"/home/tabz/Odin/core/math/big/radix.odin",
+		"/home/tabz/Projects/greek/main.odin",
+		"/home/tabz/Projects/greek/README.md",
+		"/home/tabz/Odin/core/log/log.odin",
+		"/home/tabz/Projects/greek/http-library.sublime-project",
+		"/home/tabz/Projects/breakout/main.odin",
+		"/home/tabz/Projects/breakout/breakout.sublime-project",
+		"/home/tabz/Projects/greek/myproject.sublime-project",
+		"/home/tabz/Projects/amfwebsite/deploy.sh",
+		"/home/tabz/Projects/amfwebsite/styles.css",
+		"/home/tabz/Projects/amfwebsite/index.nginx-debian.html",
+		"/home/tabz/Projects/amfwebsite/.gitignore"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 197.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.odin",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 72,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Odin/Odin.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 191.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "game_build_odin",
+	"project": "breakout.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"fmt.",
+				"core/fmt/fmt.odin"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 296.0,
+		"last_filter": "https",
+		"selected_items":
+		[
+			[
+				"https",
+				"HTTPServer"
+			],
+			[
+				"fatal",
+				"fatalf"
+			],
+			[
+				"int to string",
+				"endpoint_to_string"
+			],
+			[
+				"int to strin",
+				"int_to_string"
+			],
+			[
+				"accept",
+				"accept"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 243.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
