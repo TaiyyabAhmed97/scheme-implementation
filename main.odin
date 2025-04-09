@@ -16,6 +16,9 @@ TokenType :: enum {
   // Literals.
   IDENTIFIER, STRING, NUMBER,
 
+  //Comments
+  LINE_COMMENT,
+
   // Keywords.
   AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,
   PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,
@@ -39,7 +42,6 @@ run :: proc() {
 	// tokens := scan_tokens(source)
 	for !is_at_end() {
 		char := advance()
-		fmt.printfln("currently scanning %c %d, \nstart: %d",source[current],current, start)
 		switch char {
 		  case '(': add_token(.LEFT_PAREN);
 	      case ')': add_token(.RIGHT_PAREN);
@@ -57,17 +59,18 @@ run :: proc() {
 	      case '>': add_token(match('=') ? .GREATER_EQUAL : .GREATER);
 	      case ' ', '\r', '\t': {
 	      	//ignore
-	      	fmt.println("ingonred")
+	      }
+	      case '"': {
+	      	peek('"', .STRING)
 	      }
 	      case '/': {
 	      	if match('/') {
-	      		peek()
+	      		peek('\n', .LINE_COMMENT)
 	      	} else {
 	      		add_token(.SLASH)
 	      	}
 	      }
 		  case '\n': {
-		  	fmt.println("new lineds")
 		  	line += 1
 		  }
 
@@ -76,7 +79,9 @@ run :: proc() {
 		start = current
 	}
 	
-	fmt.println("tokens list: ", tokens)
+	for token in tokens {
+		print_token(token)
+	}
 }
 
 add_token :: proc{
@@ -84,33 +89,46 @@ add_token :: proc{
 	add_token_with_literal
 }
 
-add_token_with_literal :: proc(token_type: TokenType, literal: any) {
+print_token :: proc(using token: Token) {
+	fmt.printfln("Type: %s\tLexeme: %s\tLiteral: %s\tLine: %d",type, lexeme, literal, line)
+}
+
+add_token_with_literal :: proc(token_type: TokenType, literal: []u8) {
 	using tokenizer
+	
 	range_start: int
 	range_end: int
 	if(current == start) {
 		range_start = current
 		range_end = current + 1
-	} else {
+	} else if(token_type == .STRING) {
+		range_start, range_end = start, current + 2
+	}
+	else {
 		range_start, range_end = start, current
 	}
 	token := Token{token_type, tokenizer.source[range_start:range_end], literal, tokenizer.line}
-	fmt.printfln("adding token when current is %d %c and start is %d %c\nSCANNED: %s", current, source[current], start, source[start],tokenizer.source[tokenizer.start:tokenizer.current])
+
 	append(&tokens, token)
 	start = current
 	tokenizer.current += 1
 }
 
-peek :: proc() {
-	for !is_at_end() && tokenizer.source[tokenizer.current + 1] != '\n' {
-		fmt.println("PEEKING")
+peek :: proc(lookahead: u8, token_type: TokenType) {
+	using tokenizer
+	for !is_at_end() && tokenizer.source[tokenizer.current + 1] != lookahead {
 		tokenizer.current += 1
 	}
+	if(token_type == .LINE_COMMENT){ 
+		add_token(token_type, tokenizer.source[tokenizer.start+2:tokenizer.current])
+		line += 1
+	}
+	if(token_type == .STRING) {add_token(token_type, tokenizer.source[tokenizer.start+1:tokenizer.current+1])
+	 }
 }
 
 match :: proc(expected: u8) -> bool {
 	using tokenizer
-	fmt.printfln("(current = %d,)in match and expected is %c, source[current+1] = %c",current, expected, source[current + 1])
 	if source[current + 1] == expected {
 		current += 1
 		return true
