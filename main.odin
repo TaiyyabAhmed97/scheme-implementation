@@ -1,3 +1,4 @@
+#+feature dynamic-literals
 package main
 import "core:fmt"
 import "core:os"
@@ -31,6 +32,25 @@ Tokenizer :: struct {
 	current: int,
 	line: uint,
 	start: int
+}
+
+keywords_map := map[string]TokenType{
+	"and" = .AND,
+    "class" = .CLASS,
+    "else" = .ELSE,
+    "false" =.FALSE,
+    "for" =  .FOR,
+    "fun" = .FUN,
+    "if" = .IF,
+    "nil" = .NIL,
+    "or" = .OR,
+    "print" =.PRINT,
+    "return"=.RETURN,
+    "super" =.SUPER,
+    "this" = .THIS,
+    "true" = .TRUE,
+    "var" =  .VAR,
+    "while" =.WHILE
 }
 
 tokenizer := Tokenizer{nil, 0,1,0}
@@ -117,7 +137,11 @@ keyword :: proc() {
 	for !is_at_end() && is_alpha(tokenizer.source[tokenizer.current]) {
 		tokenizer.current += 1
 	}
-	add_token(.IDENTIFIER, source[start:current])
+	ident, ok := keywords_map[string(source[start:current])] 
+	if !ok {
+		ident = .IDENTIFIER
+	}
+	add_token(ident, source[start:current])
 }
 
 number :: proc() {
