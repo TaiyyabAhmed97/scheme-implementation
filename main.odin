@@ -41,6 +41,7 @@ run :: proc() {
 	
 	// tokens := scan_tokens(source)
 	for !is_at_end() {
+		fmt.printfln("current %d %c, start %d %c, scanning: %s", current, source[current], start, source[start], source[start:current])
 		char := advance()
 		switch char {
 		  case '(': add_token(.LEFT_PAREN);
@@ -66,6 +67,8 @@ run :: proc() {
 	      case '/': {
 	      	if match('/') {
 	      		peek('\n', .LINE_COMMENT)
+	      		start = current
+	      		continue
 	      	} else {
 	      		add_token(.SLASH)
 	      	}
@@ -73,15 +76,36 @@ run :: proc() {
 		  case '\n': {
 		  	line += 1
 		  }
+		  case : {
+		  	if (is_letter(char)) {
+		  		keyword()
+		  		tokenizer.current += 2
+				start = current
+				continue
+		  	}
+		  }
 
 		}
 		tokenizer.current += 1
 		start = current
+		fmt.println(tokens)
 	}
 	
 	for token in tokens {
 		print_token(token)
 	}
+}
+
+is_letter :: proc(char: u8) -> bool {
+	return char >= 'A' && char <= 'z'
+}
+
+keyword :: proc() {
+	using tokenizer
+	for !is_at_end() && is_letter(tokenizer.source[tokenizer.current]) {
+		tokenizer.current += 1
+	}
+	add_token(.IDENTIFIER, source[start:current])
 }
 
 add_token :: proc{
@@ -110,8 +134,6 @@ add_token_with_literal :: proc(token_type: TokenType, literal: []u8) {
 	token := Token{token_type, tokenizer.source[range_start:range_end], literal, tokenizer.line}
 
 	append(&tokens, token)
-	start = current
-	tokenizer.current += 1
 }
 
 peek :: proc(lookahead: u8, token_type: TokenType) {
