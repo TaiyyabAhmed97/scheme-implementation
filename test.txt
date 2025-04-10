@@ -1,2 +1,3 @@
 // Your first Lox program!
-print "Hello, world!";
+123 + 345;
+p543frint432 "Hello, world!";

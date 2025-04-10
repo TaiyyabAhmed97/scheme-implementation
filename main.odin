@@ -41,7 +41,6 @@ run :: proc() {
 	
 	// tokens := scan_tokens(source)
 	for !is_at_end() {
-		fmt.printfln("current %d %c, start %d %c, scanning: %s len(source)", current, source[current], start, source[start], source[start:current], len(source))
 		char := advance()
 		switch char {
 		  case '(': add_token(.LEFT_PAREN);
@@ -63,7 +62,6 @@ run :: proc() {
 	      }
 	      case '"': {
 	      	peek('"', .STRING)
-	      	fmt.printfln("scnanning %c", source[current])
 	      	start = current
 	      }
 	      case '/': {
@@ -85,12 +83,16 @@ run :: proc() {
 				start = current
 				continue
 		  	}
+		  	if(is_digit(char)) {
+		  		number()
+		  		start = current
+		  		continue
+		  	}
 		  }
 
 		}
 		tokenizer.current += 1
 		start = current
-		fmt.println(tokens)
 	}
 	
 	for token in tokens {
@@ -112,10 +114,18 @@ is_alpha :: proc(char: u8) -> bool {
 
 keyword :: proc() {
 	using tokenizer
-	for !is_at_end() && is_letter(tokenizer.source[tokenizer.current]) {
+	for !is_at_end() && is_alpha(tokenizer.source[tokenizer.current]) {
 		tokenizer.current += 1
 	}
 	add_token(.IDENTIFIER, source[start:current])
+}
+
+number :: proc() {
+	using tokenizer
+	for !is_at_end() && is_digit(tokenizer.source[tokenizer.current]) {
+		tokenizer.current += 1
+	}
+	add_token(.NUMBER, source[start:current])
 }
 
 add_token :: proc{
@@ -157,8 +167,7 @@ peek :: proc(lookahead: u8, token_type: TokenType) {
 	}
 	if(token_type == .STRING) {
 		tokenizer.current += 1
-		add_token(token_type, tokenizer.source[tokenizer.start+1:tokenizer.current+1])
-		fmt.println("in here")
+		add_token(token_type, tokenizer.source[tokenizer.start+1:tokenizer.current])
 	 }
 }
 
