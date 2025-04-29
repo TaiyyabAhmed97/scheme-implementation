@@ -5,3 +5,6 @@
 
 ### Progress update (04-17-2025)
 * finisehd tokenizer, stuck on creating parse tree
+
+### Progress update (04-29-2025)
+* research on parser and get out of analysis paralysis

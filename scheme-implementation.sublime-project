@@ -11,4 +11,10 @@
 			"path": "/home/tabz/Odin/base"
 		}
 	],
+	"build_systems":[
+		{
+			"name": "my_builder",
+			"cmd": [""]
+		}
+	]
 }
